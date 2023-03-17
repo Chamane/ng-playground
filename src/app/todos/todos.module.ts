@@ -8,8 +8,8 @@ import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
+    AddTodoComponent,
     ListTodosComponent,
-    AddTodoComponent
   ],
   imports: [
     CommonModule,
