@@ -1,6 +1,6 @@
 <div class="shadow-lg border-black p-8 bg-white w-1/2 rounded" id="position">
     <app-add-todo (addItem)="onAddItem($event)"></app-add-todo>
     <div class="flex flex-col mt-2 py-2">
-        <app-todo-item *ngFor="let todo of todos" [title]="todo" (deleteItem)="onDeleteItem($event)"></app-todo-item>
+        <app-todo-item *ngFor="let todo of getTodos()" [title]="todo" (deleteItem)="onDeleteItem($event)"></app-todo-item>
     </div>
 </div>
