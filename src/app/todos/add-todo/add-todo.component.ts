@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-todo',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-todo.component.css']
 })
 export class AddTodoComponent {
+  entry: string = '';
+  @Output() addItem: EventEmitter<string> = new EventEmitter();
 
+  onClick(){
+    this.addItem.emit(this.entry);
+  }
+
+  onKeyup(e: any){
+    this.entry = e.target.value;
+  }
 }

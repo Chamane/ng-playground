@@ -1,3 +1,8 @@
-<h1 class="text-3xl font-bold underline">
-    Hello world!
-</h1>
+<div class="flex">
+    <div class="flex-1 h-10">
+        <input type="text" class="border p-2 w-full border-slate-300 focus:outline-none focus:border-slate-600 rounded font-light" (keyup)="onKeyup($event)">
+    </div>
+    <div class="m-0 p-0 ml-2 h-10">
+        <button class="p-2 border bg-emerald-600 border-emerald-600 min-w-16 text-white hover:bg-emerald-500 rounded font-light" (click)="onClick()">Add todo</button>
+    </div>
+</div>
